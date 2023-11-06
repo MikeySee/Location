@@ -12,13 +12,9 @@
 
     
         if(!testEntityAdded) {
-            const entity = document.createElement("a-box");
-            entity.setAttribute("scale", {
-                x: 5, 
-                y: 5,
-                z: 5
-            });
-            entity.setAttribute('material', { color: 'red' } );
+            const entity = document.createElement("a-image");
+            entity.setAttribute("src", "wnclogo.svg");
+            entity.setAttribute("width","0.5");
             entity.setAttribute('gps-new-entity-place', {
                 latitude: urlParams.get('lat'),
                 longitude: urlParams.get('lng')

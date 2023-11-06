@@ -14,6 +14,12 @@
         if(!testEntityAdded) {
             const entity = document.createElement("a-image");
             entity.setAttribute("src", "wnclogo.svg");
+
+            entity.setAttribute("scale", {
+                x: 20, 
+                y: 20,
+                z: 20
+            });
             entity.setAttribute("width","5");
             entity.setAttribute('gps-new-entity-place', {
                 latitude: urlParams.get('lat'),

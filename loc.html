@@ -34,12 +34,10 @@
 </script>
 </head>
 <body>
-    <a-scene webxr="requiredFeatures: hit-test,local-floor;
-    optionalFeatures: dom-overlay,unbounded;
-    overlayElement: #overlay;">
+<a-scene vr-mode-ui='enabled: false' arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true'>
     <a-camera gps-new-camera='gpsMinDistance: 5'></a-camera>
     <a-entity id="locale" material='color: red' geometry='primitive: box' gps-new-entity-place="" scale="10 10 10"></a-entity>
-    </a-scene>
+</a-scene>
 </body>
 <script>document.getElementById("locale").innerHTML=locstring();</script>
 </html>

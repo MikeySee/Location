@@ -4,7 +4,14 @@
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
     <body style='margin : 0px; overflow: hidden;'>
       <a-scene embedded arjs>
-        <!-- create your content here. just a box for now -->
+        <a-assets>
+            <img id="brownbin" src="brownbin.png">
+            <img id="bluebin" src="bluebin.png">
+            <img id="blackbin" src="blackbin.png">
+            <img id="gardenbin" src="gardenbin.png">
+        </a-assets>
+        <a-plane src="#brownbin" height="100" width="100" rotation="-90 0 0"></a-plane>
+        
         <a-entity geometry="primitive:plane;" position="0 .75 0" 
         material="opacity: 0.15; color:white;" 
         text="height:auto; value:Collection day: Friday\nFood waste;side:double;color:black;baseline:bottom;align:left;anchor:center;"></a-entity>

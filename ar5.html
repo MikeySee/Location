@@ -1,15 +1,25 @@
 <html>
     <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
     <!-- include ar.js for A-Frame -->
-    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/frame-ar.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
     <body style='margin : 0px; overflow: hidden;'>
-      <a-scene webxr="requiredFeatures: hit-test,local-floor;
-      optionalFeatures: dom-overlay,unbounded;
-      overlayElement: #overlay;">
-        <!-- create your content here. just a box for now -->
-        <a-box position='0 0.5 0' material='opacity: 0.5; color: blue;'></a-box>
-        <a-text align="center" value="Food collection" color="black" z-offset="1.75"></a-text>
-        <!-- define a camera which will move according to the marker position -->
+      <a-scene embedded arjs>
+        <a-assets>
+            <img id="brownbin" src="brownbin.png">
+            <img id="bluebin" src="bluebin.png">
+            <img id="blackbin" src="blackbin.png">
+            <img id="gardenbin" src="gardenbin.png"> 
+        </a-assets>
+
+        <a-plane src="#brownbin" height="1" width=".5" rotation="-90 0 0" position="-.5 0 0"></a-plane>
+        
+        <a-plane src="#bluebin" height="1" width=".5" rotation="-90 0 0" position="0 0 0"></a-plane>
+        
+
+        <a-plane src="#blackbin" height="1" width=".5" rotation="-90 0 0" position=".5 0 0"></a-plane>
+        
+        <a-entity geometry="primitive:plane; height:.5;width:1;" rotation="-45 0 0" position="0 .55 0" material="opacity: 0.75; color:#385889;" text="width:2; value:Collection day: Friday;side:double;color:white;baseline:bottom;align:center;anchor:center; "></a-entity>
+       
         <a-marker-camera type='pattern' url='wnc2.patt'></a-marker-camera>
       </a-scene>
     </body>
